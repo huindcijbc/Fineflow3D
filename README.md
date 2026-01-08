@@ -20,7 +20,8 @@ pip install torch-scatter -f [https://data.pyg.org/whl/torch-1.12.0+cu113.html](
 pip install torch-cluster -f [https://data.pyg.org/whl/torch-1.12.0+cu113.html](https://data.pyg.org/whl/torch-1.12.0+cu113.html)
 ```
 
-📂 Data Preparation
+## 📂 Data Preparation
+
 To train the full dataset, please refer to the https://github.com/KTH-RPL/OpenSceneFlow/blob/main/dataprocess/README.md for raw data download and h5py files preparation.
 
 Please organize your datasets (e.g., NuScenes) inside the data directory.
@@ -33,7 +34,8 @@ Project/
 ├── train.py
 └── ...
 ```
-🚀 Training
+## 🚀 Train
+
 To train a model using the NuScenes dataset, run the following command, You can also modify `batch_size` and `accumulate_grad_batches` according to your computer's configuration:
 ```bash
 python train.py \
@@ -46,7 +48,8 @@ python train.py \
     loss_fn=deflowLoss
 ```
 
-⚖️ Evaluation
+## ⚖️ Evaluation
+
 You can also evaluate the model on the NuScenes validation set using the following command:
 ```bash
 python eval.py checkpoint=path_to_checkpoint dataset_path=/your_path/data/nuscenes/h5py/full
@@ -56,7 +59,8 @@ The evaluation results obtained on this dataset are shown below:
 
 For additional visualization results, please refer to OpenSceneFlow.
 
-🙏 Acknowledgements
+## 🙏 Acknowledgements
+
 This code is based on the DeFlow code by Qingwen Zhang. I would like to express my deepest gratitude to her for this excellent work.
 
 Additionally, I would like to thank [Insert Name Here] for their support with the NuScenes dataset for this task.
